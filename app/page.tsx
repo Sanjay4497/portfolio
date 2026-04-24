@@ -33,10 +33,10 @@ export default function Page() {
         {/* METRICS */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {[
-            {label:"AI Containers",value:"25+"},
+            {label:"AI Containers",value:"30+"},
             {label:"Experience",value:"7+ Years"},
             {label:"Machines Integrated",value:"350+"},
-            {label:"Industries",value:"5+"}
+            {label:"Industries",value:"7+"}
           ].map((item,i)=>(
             <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10">
               <h3 className="text-3xl font-bold">{item.value}</h3>
