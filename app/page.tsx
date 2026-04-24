@@ -7,127 +7,105 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="bg-gray-950 text-gray-200 min-h-screen font-sans">
+    <div className="bg-[#0A0A0A] text-gray-300 min-h-screen font-sans">
 
-      {/* HEADER */}
-      <header className="border-b border-gray-800 bg-gray-950 sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-          <h1 className="font-bold text-lg text-white">Sanjay Nandaniya</h1>
-          <div className="flex gap-6 text-sm text-gray-400">
+      {/* NAV */}
+      <header className="border-b border-gray-800 sticky top-0 bg-[#0A0A0A]/80 backdrop-blur z-10">
+        <div className="max-w-6xl mx-auto flex justify-between p-4 text-sm">
+          <h1 className="font-semibold text-white">Sanjay Nandaniya</h1>
+          <div className="flex gap-6">
+            <button onClick={() => scrollTo("about")}>About</button>
             <button onClick={() => scrollTo("experience")}>Experience</button>
             <button onClick={() => scrollTo("projects")}>Projects</button>
             <button onClick={() => scrollTo("skills")}>Skills</button>
-            <button onClick={() => scrollTo("contact")}>Contact</button>
           </div>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto p-8">
-        <h2 className="text-4xl font-bold leading-tight text-white">
-          Industry 4.0 & IIoT Architect
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-5xl font-bold text-white leading-tight">
+          Industry 4.0 Architect <br />
+          <span className="text-gray-400">Edge AI • Digital Twins • IIoT</span>
         </h2>
 
-        <p className="mt-3 text-gray-400">
-          Edge AI • Digital Twins • IT-OT Transformation
+        <p className="mt-6 max-w-3xl text-gray-400 leading-relaxed">
+          Designing production-grade industrial systems that bridge Edge AI, Digital Twins,
+          and cloud-native architectures. Focused on building scalable, resilient,
+          and compliant solutions across manufacturing and energy domains.
         </p>
 
-        <p className="mt-6 text-gray-300 leading-relaxed max-w-3xl">
-          Industry 4.0 Architect with 7+ years of experience across industrial automation,
-          Edge AI, Digital Twins, and cloud-native IT-OT ecosystems. Proven track record
-          of delivering production-grade architectures across manufacturing, pharma,
-          energy, and automotive domains.
-        </p>
-
-        <div className="mt-6 text-sm text-gray-400">
-          📞 +91-9687757217 | ✉ nandaniyasanjay123@gmail.com | 
-          <a href="https://linkedin.com/in/sanjay-nandaniya-1585b4142" className="underline ml-1 text-cyan-400">
-            LinkedIn
-          </a>
+        <div className="mt-8 text-sm text-gray-500">
+          +91-9687757217 • nandaniyasanjay123@gmail.com • 
+          <a href="https://linkedin.com/in/sanjay-nandaniya-1585b4142" className="text-blue-400 ml-1">LinkedIn</a>
         </div>
       </section>
 
-      {/* PROFILE SUMMARY */}
-      <section className="max-w-6xl mx-auto p-8 border-t border-gray-800">
-        <h3 className="text-2xl font-semibold mb-4 text-white">Profile Summary</h3>
-        <ul className="space-y-2 text-gray-300 text-sm">
-          <li>• Edge AI validation across Qualcomm DSP/NPU, NXP i.MX, NVIDIA Jetson</li>
-          <li>• 25+ AI/ML container validations with benchmarking and optimization</li>
-          <li>• End-to-end IIoT & MES architectures (OPC UA, MQTT, BACnet)</li>
-          <li>• AWS & Azure IoT platforms with Digital Twin implementations</li>
-          <li>• Strong expertise in regulated environments (21 CFR Part 11, IQ/OQ/PQ)</li>
-        </ul>
+      {/* ABOUT */}
+      <section id="about" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <h3 className="text-2xl text-white mb-6">Profile</h3>
+
+        <p className="text-gray-400 leading-relaxed max-w-4xl">
+          With over seven years of experience in industrial automation and IIoT ecosystems,
+          I specialize in translating complex operational challenges into scalable digital
+          architectures. My work spans Edge AI validation, Digital Twin systems, and
+          enterprise IoT platforms, delivering measurable impact across pharma,
+          manufacturing, and energy sectors.
+        </p>
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="max-w-6xl mx-auto p-8 border-t border-gray-800">
-        <h3 className="text-2xl font-semibold mb-6 text-white">Professional Experience</h3>
+      <section id="experience" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <h3 className="text-2xl text-white mb-8">Experience</h3>
 
-        <div className="space-y-6 text-sm">
+        <div className="space-y-8">
 
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Nagarro</h4>
-            <p className="text-gray-500">MAR-2024 – PRESENT</p>
-            <p className="text-gray-300">Staff Engineer (DEC-2025 – PRESENT)</p>
-            <p className="text-gray-300">Associate Staff Engineer (MAR-2024 – DEC-2025)</p>
+          <div>
+            <h4 className="text-white font-semibold">Nagarro</h4>
+            <p className="text-gray-500 text-sm">MAR-2024 – PRESENT</p>
+
+            <ul className="mt-3 text-sm text-gray-400 space-y-2">
+              <li>• Delivered Edge AI systems across Qualcomm, NXP, NVIDIA Jetson</li>
+              <li>• Built LLM + RAG pipelines with benchmarking and optimization</li>
+              <li>• Designed scalable validation frameworks for production AI</li>
+            </ul>
           </div>
 
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Accenture</h4>
-            <p className="text-gray-500">APR-2023 – FEB-2024</p>
+          <div>
+            <h4 className="text-white font-semibold">Accenture</h4>
+            <p className="text-gray-500 text-sm">APR-2023 – FEB-2024</p>
+            <p className="text-gray-400 text-sm mt-2">
+              Built enterprise Azure Digital Twin enabling real-time operational visibility.
+            </p>
           </div>
 
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Wipro Technologies</h4>
-            <p className="text-gray-500">NOV-2021 – APR-2023</p>
-          </div>
-
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Torrent Pharmaceutical</h4>
-            <p className="text-gray-500">JUN-2019 – OCT-2021</p>
-          </div>
-
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Sanofi</h4>
-            <p className="text-gray-500">SEP-2018 – JUN-2019</p>
+          <div>
+            <h4 className="text-white font-semibold">Wipro</h4>
+            <p className="text-gray-500 text-sm">NOV-2021 – APR-2023</p>
           </div>
 
         </div>
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="max-w-6xl mx-auto p-8 border-t border-gray-800">
-        <h3 className="text-2xl font-semibold mb-6 text-white">Key Projects</h3>
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <h3 className="text-2xl text-white mb-8">Selected Work</h3>
 
-        <div className="space-y-6 text-sm text-gray-300">
+        <div className="grid md:grid-cols-2 gap-6">
 
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Advantech Edge AI Platform</h4>
-            <p>
-              Delivered production-grade Edge AI workloads across Qualcomm, NXP,
-              and NVIDIA Jetson platforms with LLM, CV, and RAG pipelines.
+          <div className="bg-[#111] p-6 rounded-lg border border-gray-800">
+            <h4 className="text-white font-semibold mb-2">Edge AI Platform</h4>
+            <p className="text-sm text-gray-400">
+              Built multi-platform Edge AI pipelines integrating LLMs, CV, and RAG systems
+              across heterogeneous hardware environments.
             </p>
           </div>
 
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Industrial IoT Platform</h4>
-            <p>
-              Designed AWS-based IoT systems integrating OPC UA, MQTT, BACnet with
-              real-time analytics and scalable microservices architecture.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Azure Digital Twin</h4>
-            <p>
-              Built enterprise-scale Digital Twin platform with OT integration.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-            <h4 className="font-semibold text-white">Cloud Historian</h4>
-            <p>
-              Developed multi-site industrial historian using Azure IoT and analytics.
+          <div className="bg-[#111] p-6 rounded-lg border border-gray-800">
+            <h4 className="text-white font-semibold mb-2">Industrial IoT Platform</h4>
+            <p className="text-sm text-gray-400">
+              Architected scalable AWS-based IoT systems integrating OPC UA, MQTT,
+              and real-time analytics.
             </p>
           </div>
 
@@ -135,32 +113,36 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="max-w-6xl mx-auto p-8 border-t border-gray-800">
-        <h3 className="text-2xl font-semibold mb-4 text-white">Technical Skills</h3>
+      <section id="skills" className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <h3 className="text-2xl text-white mb-6">Capabilities</h3>
 
-        <p className="text-sm text-gray-300 leading-relaxed">
-          Edge AI, LLM, RAG, Computer Vision | NVIDIA Jetson, Qualcomm DSP/NPU, NXP |
-          LangChain, Ollama, YOLO | AWS IoT, Azure IoT | OPC UA, MQTT, BACnet |
-          Docker, FastAPI, Node.js | ThingWorx, Ignition | SQL, FAISS
-        </p>
+        <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-400">
+          <div>
+            <h4 className="text-white mb-2">Edge AI</h4>
+            <p>LLMs, RAG, Computer Vision, Benchmarking</p>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-2">IIoT Systems</h4>
+            <p>OPC UA, MQTT, BACnet, MES, Digital Twins</p>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-2">Cloud</h4>
+            <p>AWS IoT, Azure Digital Twin, Microservices</p>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-2">Backend</h4>
+            <p>Python, FastAPI, Node.js, SQL</p>
+          </div>
+        </div>
       </section>
 
-      {/* EDUCATION */}
-      <section className="max-w-6xl mx-auto p-8 border-t border-gray-800">
-        <h3 className="text-2xl font-semibold mb-4 text-white">Education</h3>
-        <p className="text-sm text-gray-300">
-          Bachelor of Technology – Instrumentation & Control<br/>
-          Government Engineering College, Rajkot
-        </p>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="max-w-6xl mx-auto p-8 border-t border-gray-800 text-center">
-        <h3 className="text-xl font-semibold text-white">Contact</h3>
-        <p className="mt-3 text-gray-400">
-          nandaniyasanjay123@gmail.com | +91-9687757217
-        </p>
-      </section>
+      {/* FOOTER */}
+      <footer className="text-center py-10 border-t border-gray-800 text-gray-500 text-sm">
+        © {new Date().getFullYear()} Sanjay Nandaniya
+      </footer>
 
     </div>
   );
