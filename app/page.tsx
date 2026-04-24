@@ -1,216 +1,200 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-const Section = ({ title, children }: any) => (
-  <section className="mb-24">
-    <h2 className="text-3xl md:text-4xl font-semibold mb-10 tracking-tight">
-      {title}
-    </h2>
-    {children}
-  </section>
-);
-
-const Card = ({ children }: any) => (
-  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition">
-    {children}
-  </div>
-);
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className="bg-black text-white min-h-screen px-6 md:px-24 py-12">
+    <div className="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen px-6 py-10">
+      <div className="max-w-7xl mx-auto">
 
-      {/* HERO */}
-      <section className="mb-32">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Sanjay Nandaniya
-        </h1>
+        {/* HERO */}
+        <section className="mb-20">
+          <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} className="text-5xl font-bold">
+            Sanjay Hajabhai Nandaniya
+          </motion.h1>
 
-        <p className="text-xl md:text-2xl text-gray-400 mb-6">
-          Industry 4.0 Architect • Edge AI • Digital Twins • IT-OT Transformation
-        </p>
+          <p className="mt-4 text-xl text-gray-300">
+            Industry 4.0 & IIoT Architect | Edge AI | IT-OT Transformation Specialist
+          </p>
 
-        <p className="max-w-5xl text-gray-300 leading-relaxed text-lg">
-          Architecting production-grade Edge AI systems, Digital Twins, and industrial cloud platforms across pharma, manufacturing, energy, and automotive domains. 
-          Bridging IT and OT through scalable architectures that deliver measurable operational intelligence, resilience, and business impact.
-        </p>
+          <p className="mt-6 text-gray-400 max-w-4xl">
+            Building production-grade Digital Twins, Edge AI systems, and industrial cloud platforms. Specialized in LLM, RAG, and computer vision workloads on constrained edge hardware with strong IT-OT integration across pharma, manufacturing, energy, and automotive industries.
+          </p>
 
-        <div className="mt-6 text-gray-400">
-          <p>📧 nandaniyasanjay123@gmail.com</p>
-          <p>📞 +91-9687757217</p>
-          <p>🔗 linkedin.com/in/sanjay-nandaniya-1585b4142</p>
-        </div>
-      </section>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="px-4 py-2 bg-white/10 rounded-xl">📞 +91-9687757217</span>
+            <span className="px-4 py-2 bg-white/10 rounded-xl">✉ nandaniyasanjay123@gmail.com</span>
+            <a href="https://www.linkedin.com/in/sanjay-nandaniya-1585b4142/" className="px-4 py-2 bg-blue-500/20 rounded-xl">LinkedIn</a>
+          </div>
+        </section>
 
-      {/* IMPACT */}
-      <Section title="Impact & Scale">
-        <div className="grid md:grid-cols-4 gap-6">
-          <Card>
-            <h3 className="text-3xl font-bold">25+</h3>
-            <p className="text-gray-400">AI/ML Containers Validated</p>
-          </Card>
-          <Card>
-            <h3 className="text-3xl font-bold">100+</h3>
-            <p className="text-gray-400">Industrial Assets Integrated</p>
-          </Card>
-          <Card>
-            <h3 className="text-3xl font-bold">6+</h3>
-            <p className="text-gray-400">Plants Digitized (MES/IIoT)</p>
-          </Card>
-          <Card>
-            <h3 className="text-3xl font-bold">7+ yrs</h3>
-            <p className="text-gray-400">Industry Experience</p>
-          </Card>
-        </div>
-      </Section>
+        {/* METRICS */}
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+          {[
+            {label:"AI Containers",value:"25+"},
+            {label:"Experience",value:"7+ Years"},
+            {label:"Machines Integrated",value:"100+"},
+            {label:"Industries",value:"5+"}
+          ].map((item,i)=>(
+            <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10">
+              <h3 className="text-3xl font-bold">{item.value}</h3>
+              <p className="text-gray-400 mt-2">{item.label}</p>
+            </div>
+          ))}
+        </section>
 
-      {/* EXPERTISE */}
-      <Section title="Core Expertise">
-        <div className="grid md:grid-cols-2 gap-6 text-gray-300">
-          <Card>Edge AI Validation • LLM • RAG • Computer Vision</Card>
-          <Card>IIoT Architecture • OPC UA • MQTT • BACnet</Card>
-          <Card>Digital Twins • MES • SCADA Integration</Card>
-          <Card>AWS & Azure Industrial Platforms</Card>
-          <Card>DSP / NPU / GPU Acceleration</Card>
-          <Card>Performance Benchmarking & Stability Engineering</Card>
-        </div>
-      </Section>
+        {/* PROFILE SUMMARY */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold mb-6">Profile Summary</h2>
+          <p className="text-gray-300 leading-relaxed">
+            A consummate Industry 4.0 and IIoT Architect with deep expertise across Edge AI, Digital Twins, and industrial cloud ecosystems. Proven ability to translate complex industrial challenges into scalable architectures delivering measurable business value. Strong experience in regulated environments (21 CFR Part 11, IQ/OQ/PQ) ensuring compliance-driven engineering.
+          </p>
+        </section>
 
-      {/* EXPERIENCE */}
-      <Section title="Professional Experience">
+        {/* TECH STACK (TABLE FORMAT) */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold mb-8">Technology Stack</h2>
 
-        <div className="space-y-10">
+          <div className="overflow-x-auto">
+            <table className="w-full border border-white/10 text-left">
+              <thead className="bg-white/10">
+                <tr>
+                  <th className="p-4">Category</th>
+                  <th className="p-4">Technologies</th>
+                </tr>
+              </thead>
+              <tbody>
 
-          <Card>
-            <h3 className="text-xl font-bold">Nagarro (2024 – Present)</h3>
-            <p className="text-gray-400 mb-4">Staff Engineer → Associate Staff Engineer</p>
-            <ul className="list-disc ml-6 text-gray-300 space-y-2">
-              <li>Delivered production-grade Edge AI across Qualcomm, NXP, NVIDIA</li>
-              <li>Validated LLM pipelines (DeepSeek, Llama, Qwen) with RAG systems</li>
-              <li>Built benchmarking frameworks (Q4/Q8, latency, throughput)</li>
-              <li>Designed large-scale IoT architectures on AWS</li>
-            </ul>
-          </Card>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">IIoT & Platforms</td>
+                  <td className="p-4 text-gray-400">
+                    AWS IoT (Core, Greengrass, SiteWise, TwinMaker, Kinesis, EC2, Lambda, S3), Azure IoT (Hub, ADX, ADT, AKS, Data Lake), ThingWorx, Ignition, AVEVA
+                  </td>
+                </tr>
 
-          <Card>
-            <h3 className="text-xl font-bold">Accenture (2023 – 2024)</h3>
-            <ul className="list-disc ml-6 text-gray-300 space-y-2">
-              <li>Built enterprise Azure Digital Twin</li>
-              <li>Designed AKS ingestion pipelines</li>
-              <li>Integrated PLC/SCADA into cloud systems</li>
-            </ul>
-          </Card>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Edge AI & ML</td>
+                  <td className="p-4 text-gray-400">
+                    NVIDIA Jetson, Qualcomm DSP/NPU, NXP i.MX, Ollama, LangChain, Llama.cpp, YOLO, RAG Pipelines, Locust, stress-ng
+                  </td>
+                </tr>
 
-          <Card>
-            <h3 className="text-xl font-bold">Wipro (2021 – 2023)</h3>
-            <ul className="list-disc ml-6 text-gray-300 space-y-2">
-              <li>Developed cloud historian across 5 sites</li>
-              <li>Built MES platform across 6 plants</li>
-              <li>Integrated OT systems with Azure</li>
-            </ul>
-          </Card>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Databases</td>
+                  <td className="p-4 text-gray-400">
+                    PostgreSQL, MS SQL, Oracle, InfluxDB, GE Historian, FAISS
+                  </td>
+                </tr>
 
-          <Card>
-            <h3 className="text-xl font-bold">Torrent Pharma (2019 – 2021)</h3>
-            <ul className="list-disc ml-6 text-gray-300 space-y-2">
-              <li>Integrated 100+ machines with MES & OPC UA</li>
-              <li>Implemented 21 CFR Part 11 systems</li>
-            </ul>
-          </Card>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Backend</td>
+                  <td className="p-4 text-gray-400">
+                    Python (FastAPI, Flask), Node.js, SQL, Kusto, Microservices, Docker, Event-driven systems
+                  </td>
+                </tr>
 
-          <Card>
-            <h3 className="text-xl font-bold">Sanofi (2018 – 2019)</h3>
-            <p className="text-gray-300">Graduate Trainee Engineer</p>
-          </Card>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Protocols</td>
+                  <td className="p-4 text-gray-400">
+                    OPC UA/DA, MQTT Sparkplug, BACnet, Modbus, REST, WebSocket
+                  </td>
+                </tr>
 
-        </div>
-      </Section>
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Visualization</td>
+                  <td className="p-4 text-gray-400">
+                    Grafana, ThingWorx Mashups, Ignition Perspective, SSRS
+                  </td>
+                </tr>
 
-      {/* SIGNATURE PROJECTS */}
-      <Section title="Signature Projects">
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Monitoring</td>
+                  <td className="p-4 text-gray-400">
+                    jtop, tegrastats, Qualcomm Profiler, system logs, htop
+                  </td>
+                </tr>
 
-        <div className="grid md:grid-cols-2 gap-6">
+                <tr className="border-t border-white/10">
+                  <td className="p-4 font-semibold">Tools</td>
+                  <td className="p-4 text-gray-400">
+                    Draw.io, Lucidchart, ELK Stack, Technical Documentation
+                  </td>
+                </tr>
 
-          <Card>
-            <h3 className="font-bold text-lg">Edge AI Platform (Advantech)</h3>
-            <p className="text-gray-400">LLM + CV + RAG Systems</p>
-            <p className="text-gray-300 mt-2">
-              Cross-platform AI validation across DSP/NPU/GPU with benchmarking, RAG pipelines, and system stability engineering.
-            </p>
-          </Card>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-          <Card>
-            <h3 className="font-bold text-lg">Industrial IoT Platforms</h3>
-            <p className="text-gray-300 mt-2">
-              AWS-based microservices architecture integrating OPC UA, BACnet, MQTT with real-time analytics.
-            </p>
-          </Card>
+        {/* EXPERIENCE */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold mb-8">Professional Experience</h2>
 
-          <Card>
-            <h3 className="font-bold text-lg">Azure Digital Twin</h3>
-            <p className="text-gray-300 mt-2">
-              Enterprise digital twin with 11-level asset hierarchy and real-time ingestion.
-            </p>
-          </Card>
+          <div className="space-y-10">
 
-          <Card>
-            <h3 className="font-bold text-lg">Cloud Historian</h3>
-            <p className="text-gray-300 mt-2">
-              Time-series analytics platform integrating multiple OT systems across sites.
-            </p>
-          </Card>
+            <div className="border-l border-gray-700 pl-6">
+              <h3 className="text-xl font-semibold">Nagarro</h3>
+              <p className="text-gray-400">Staff Engineer</p>
+              <ul className="mt-3 list-disc ml-5 text-gray-300 space-y-2">
+                <li>Delivered Edge AI workloads across Qualcomm, NXP, NVIDIA</li>
+                <li>LLM benchmarking (DeepSeek, Llama, Qwen)</li>
+                <li>RAG pipelines with FAISS and multi-document ingestion</li>
+                <li>DSP/GPU/NPU acceleration validation</li>
+                <li>Locust-based load testing & system profiling</li>
+              </ul>
+            </div>
 
-        </div>
+            <div className="border-l border-gray-700 pl-6">
+              <h3 className="text-xl font-semibold">Accenture</h3>
+              <ul className="mt-3 list-disc ml-5 text-gray-300">
+                <li>Azure Digital Twin enterprise implementation</li>
+                <li>PLC, SCADA, IoT integration</li>
+              </ul>
+            </div>
 
-      </Section>
+            <div className="border-l border-gray-700 pl-6">
+              <h3 className="text-xl font-semibold">Wipro</h3>
+              <ul className="mt-3 list-disc ml-5 text-gray-300">
+                <li>Cloud Historian across 5 sites</li>
+                <li>MES + IIoT platform development</li>
+              </ul>
+            </div>
 
-      {/* TECH STACK */}
-      <Section title="Technology Stack">
+          </div>
+        </section>
 
-        <div className="grid md:grid-cols-3 gap-6 text-gray-300">
-          <Card>
-            <h4 className="font-bold mb-2">Edge AI</h4>
-            <p>LLMs, RAG, YOLO, DSP/NPU/GPU</p>
-          </Card>
+        {/* CERTIFICATIONS */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold mb-6">Certifications</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              "AWS Fundamentals",
+              "Microsoft Azure AZ-900",
+              "ThingWorx",
+              "Kepware",
+              "Ignition",
+              "GenAI APIs"
+            ].map((c,i)=>(
+              <div key={i} className="bg-white/5 p-4 rounded-xl border border-white/10">{c}</div>
+            ))}
+          </div>
+        </section>
 
-          <Card>
-            <h4 className="font-bold mb-2">Cloud</h4>
-            <p>AWS IoT, Azure IoT, AKS, Greengrass</p>
-          </Card>
+        {/* DOMAINS */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold mb-6">Domains</h2>
+          <p className="text-gray-400">
+            Pharmaceuticals, Manufacturing, Energy Grids, Oil & Gas, Metals, Healthcare
+          </p>
+        </section>
 
-          <Card>
-            <h4 className="font-bold mb-2">Industrial</h4>
-            <p>OPC UA, MQTT, SCADA, MES</p>
-          </Card>
+        {/* FOOTER */}
+        <footer className="text-center text-gray-500 pt-10 border-t border-white/10">
+          © 2026 Sanjay Nandaniya | AI & IIoT Architect
+        </footer>
 
-          <Card>
-            <h4 className="font-bold mb-2">Backend</h4>
-            <p>Python, FastAPI, Node.js</p>
-          </Card>
-
-          <Card>
-            <h4 className="font-bold mb-2">Data</h4>
-            <p>Postgres, MSSQL, FAISS</p>
-          </Card>
-
-        </div>
-
-      </Section>
-
-      {/* RECOGNITION */}
-      <Section title="Recognition">
-        <ul className="list-disc ml-6 text-gray-300 space-y-2">
-          <li>Nagarro Care Award (2x)</li>
-          <li>Advantech PM & Lead Appreciation</li>
-        </ul>
-      </Section>
-
-      {/* FOOTER */}
-      <footer className="text-gray-500 mt-20">
-        © 2026 Sanjay Nandaniya — Built with precision engineering mindset
-      </footer>
-
-    </main>
+      </div>
+    </div>
   );
 }
