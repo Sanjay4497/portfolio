@@ -35,7 +35,7 @@ export default function Page() {
           {[
             {label:"AI Containers",value:"25+"},
             {label:"Experience",value:"7+ Years"},
-            {label:"Machines Integrated",value:"100+"},
+            {label:"Machines Integrated",value:"350+"},
             {label:"Industries",value:"5+"}
           ].map((item,i)=>(
             <div key={i} className="p-6 bg-white/5 rounded-2xl border border-white/10">
