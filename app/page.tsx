@@ -178,7 +178,7 @@ export default function Page() {
 
         <section className="py-20">
           <SectionTitle eyebrow="Profile">Architecting connected industrial intelligence</SectionTitle>
-          <p className="max-w-5xl text-lg leading-8 text-slate-300">A consummate Industry 4.0 and IIoT Architect with expertise spanning Edge AI, Digital Twins, data engineering and industrial cloud ecosystems. Proven ability to translate complex industrial challenges into scalable architectures that deliver measurable business value, including within 21 CFR Part 11 and IQ/OQ/PQ regulated environments.</p>
+          <p className="max-w-5xl text-lg leading-8 text-slate-300">A seasoned Industry 4.0 and IIoT Architect with expertise spanning Edge AI, Digital Twins, data engineering and industrial cloud ecosystems. Proven ability to translate complex industrial challenges into scalable architectures that deliver measurable business value across global metals, oil &amp; gas, energy, manufacturing, life sciences and pharmaceutical environments, including compliance-driven implementations aligned with 21 CFR Part 11 and IQ/OQ/PQ requirements.</p>
           <div className="mt-10 flex flex-wrap gap-3">
             {["Solution Architecture", "IT/OT Transformation", "Data Engineering", "ETL & ELT", "GCP", "Kubernetes", "Digital Twins", "Edge AI", "GenAI & RAG", "Industrial Analytics"].map((item) => <span key={item} className="rounded-lg border border-cyan-400/15 bg-cyan-400/[0.06] px-4 py-2 text-sm text-cyan-100">{item}</span>)}
           </div>
