@@ -147,7 +147,7 @@ export default function Page() {
           <div className="flex items-center gap-5 text-sm text-slate-300">
             <a href="#skills" className="hidden hover:text-white sm:inline">Skills</a>
             <a href="#experience" className="hidden hover:text-white sm:inline">Experience</a>
-            <a href="/Sanjay_Nandaniya_CV.pdf" download className="rounded-full border border-cyan-400/40 px-4 py-2 text-cyan-300 transition hover:bg-cyan-400/10">Download CV</a>
+            <a href="/SanjayNandaniya.pdf" download className="rounded-full border border-cyan-400/40 px-4 py-2 text-cyan-300 transition hover:bg-cyan-400/10">Download CV</a>
           </div>
         </div>
       </nav>
