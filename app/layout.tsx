@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sanjay Nandaniya | AI, Data & IIoT Architect",
+  title: "Sanjay Nandaniya | Staff Engineer & IIoT Architect",
   description:
-    "Portfolio of Sanjay Nandaniya, specializing in Industry 4.0, IIoT, Edge AI, Data Engineering, ETL, Digital Twins and cloud platforms.",
+    "Sanjay Nandaniya, Staff Engineer and IIoT Architect working across Agentic AI, Machine Learning, Edge AI, Digital Twins, Python/FastAPI and AWS, Azure and GCP platforms.",
 };
 
 export default function RootLayout({
